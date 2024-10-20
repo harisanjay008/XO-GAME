@@ -1,0 +1,83 @@
+/* src/App.css */
+.app {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #a3d5e0, #f7f9fc);
+  min-height: 100vh; /* Ensure full viewport height */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+.game {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 5px;
+  margin: 20px auto;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  font-size: 24px;
+  background: #61dafb;
+  border: 2px solid #21a0f6;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.square:hover {
+  background: #21a0f6;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.status {
+  margin: 20px;
+  font-size: 20px;
+  color: #333;
+}
+
+.restart-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background: #ff4081;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.restart-button:hover {
+  background: #e91e63;
+}
+
+@media (max-width: 600px) {
+  .board {
+    grid-template-columns: repeat(3, 80px);
+  }
+
+  .square {
+    width: 80px;
+    height: 80px;
+    font-size: 20px;
+  }
+
+  .restart-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
